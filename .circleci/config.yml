@@ -22,7 +22,7 @@ jobs:
             echo $MY_ENV_VAR
   save_hello_world_output:
     docker:
-      - image: circleci/node:13/8/0
+      - image: circleci/node:13.8.0
     steps:
       - run: echo "hello world" > ~/output.txt
       - persist_to_workspace:
