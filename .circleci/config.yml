@@ -47,8 +47,6 @@ workflows:
       - print_world:
           requires:
             - print_hello
-  my_workflow:
-    jobs:
       - save_hello_world_output
       - print_output_file
           requires:
