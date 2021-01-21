@@ -13,7 +13,7 @@ jobs:
       - run: echo hello
   print_world:
     docker:
-    - image: circleci/node:13.8.0
+      - image: circleci/node:13.8.0
     steps:
       - run: echo world
       - run:
@@ -48,6 +48,6 @@ workflows:
           requires:
             - print_hello
       - save_hello_world_output
-      - print_output_file
+      - print_output_file:
           requires:
             - save_hello_world_output
