@@ -23,7 +23,7 @@ jobs:
   save_hello_world_output:
     docker:
       - image: circleci/node:13/8/0
-    stps:
+    steps:
       - run: echo "hello world" > ~/output.txt
       - persist_to_workspace:
           root: ~/
